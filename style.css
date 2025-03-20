@@ -1,4 +1,4 @@
-/* Theme Colors and Base Styles */
+/*  Root declaration for future purposes */
 :root {
     --primary-green: #15803d;
     --primary-green-dark: #166534;
@@ -6,7 +6,6 @@
     --text-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Base Styles */
 body {
     background-color: #f9fafb;
     font-family: system-ui, -apple-system, sans-serif;
@@ -115,7 +114,7 @@ body {
     text-shadow: var(--text-shadow-light);
 }
 
-/* Main Content */
+/* Main */
 .main1 {
     max-width: 1280px;
     margin: 0 auto;
@@ -127,7 +126,7 @@ body {
     margin: 0 auto;
 }
 
-/* Form Section */
+/* Form  */
 .form1 {
     background: white;
     border-radius: 0.5rem;
@@ -250,7 +249,7 @@ body {
     color: #4b5563;
 }
 
-/* Footer Section */
+/* Footer */
 .footer1 {
     background: #1f2937;
     color: white;
@@ -341,7 +340,7 @@ body {
     color: white;
 }
 
-/* Advice Output Styles */
+/* Advice Output  */
 .output-box {
     margin-top: 20px;
     padding: 20px;
@@ -355,7 +354,7 @@ body {
 
 .output-box.show { display: block; }
 
-/* Advice Typography */
+/* Advice use of  !important starts here  */
 .text-xl {
     font-size: 1.4rem !important;
     color: rgb(0, 128, 0) !important;
@@ -377,7 +376,7 @@ body {
     margin-top: 0.5rem !important;
 }
 
-/* Advice Section Layout */
+/* Advice Section  */
 .advice-section {
     background-color: transparent !important;
     box-shadow: none !important;
