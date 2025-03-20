@@ -280,7 +280,7 @@ function displayAdvice(cropType, soilType, soilHumidity, weatherData) {
     output.classList.add("show");
 }
 
-// Creating a nice-looking display of all the advice
+// Display all the advice
 function generateAdvice(cropType, soilType, soilHumidity, weatherData) {
     const recommendations = calculateRecommendations(cropType, soilType, soilHumidity, weatherData);
 
