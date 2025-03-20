@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Smart Irrigation Advisor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        /* Navigation styles */
+        nav {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .brand-icon {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-link {
+            color: #555;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+        }
+        
+        /* Main content styles */
+        main {
+            padding: 2rem 0;
+        }
+        
+        .about-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .about-title {
+            color: #2E7D32;
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .about-subtitle {
+            color: #555;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-title {
+            color: #2E7D32;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .section-title i {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.25rem;
+        }
+        
+        .section-content {
+            color: #555;
+            font-size: 1.1rem;
+        }
+        
+        .mission-list, .features-list, .benefits-list {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+        
+        .mission-list li, .features-list li, .benefits-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .mission-list li i, .features-list li i, .benefits-list li i {
+            color: #4CAF50;
+            margin-top: 0.25rem;
+        }
+        
+        .contact-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            color: #555;
+        }
+        
+        .contact-email {
+            color: #4CAF50;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+        
+        .closing {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2E7D32;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand-icon {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .footer-brand-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .footer-about {
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style-type: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #4CAF50;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #4CAF50;
+            transform: translateY(-3px);
+        }
+        
+        .social-icon {
+            font-size: 1rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 1.75rem;
+            }
+            
+            .about-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .about-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <!-- Brand Logo and Name -->
+                <div class="brand">
+                    <i class="fas fa-tint brand-icon"></i>
+                    <span class="brand-name">Smart Irrigation Advisor</span>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <a href="main.html" class="nav-link">
+                        <i class="fas fa-water"></i>
+                        Irrigation Tool
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1 class="about-title">About Smart Irrigation Advisor</h1>
+                    <p class="about-subtitle">🌿 Helping Farmers Grow Smarter, Not Harder</p>
+                </div>
+                
+                <div class="about-section">
+                    <p class="section-content">
+                        Water is one of the most precious resources in agriculture, yet managing it efficiently remains a challenge for farmers worldwide. 
+                        At Smart Irrigation Advisor, we believe that technology and data-driven insights can empower farmers to make better irrigation decisions—saving water, 
+                        reducing costs, and maximizing crop yields.
+                    </p>
+                </div>
+                
+                <div class="about-section">
+                    <h2 class="section-title"><i class="fas fa-rocket"></i> Our Mission</h2>
+                    <p class="section-content">Our mission is simple:</p>
+                    <ul class="mission-list">
+                        <li><i class="fas fa-check-circle"></i> Help farmers optimize water usage with AI-powered irrigation recommendations.</li>
+                        <li><i class="fas fa-check-circle"></i> Provide real-time, location-based insights for different crops and soil types.</li>
+                        <li><i class="fas fa-check-circle"></i> Promote sustainable and efficient farming practices to conserve resources.</li>
+                    </ul>
+                </div>
+                
+                <div class="about-section">
+                    <h2 class="section-title"><i class="fas fa-search"></i> What We Do</h2>
+                    <p class="section-content">Our smart irrigation advisory system analyzes:</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-globe"></i> Location-based climate data (rainfall, humidity, and temperature).</li>
+                        <li><i class="fas fa-seedling"></i> Soil and crop type information to recommend precise irrigation needs.</li>
+                        <li><i class="fas fa-tint"></i> Custom water usage recommendations to prevent over- or under-watering.</li>
+                    </ul>
+                    <p class="section-content">
+                        With a simple input form, farmers get personalized advice on when and how much to water their crops. 
+                        No complex installations—just science-backed recommendations in seconds!
+                    </p>
+                </div>
+                
+                <div class="about-section">
+                    <h2 class="section-title"><i class="fas fa-lightbulb"></i> Why Choose Us?</h2>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Easy-to-use:</strong> No complicated tech—just enter your farm details and get advice instantly.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Backed by Data:</strong> Our recommendations are based on agronomic research, climate data, and AI insights.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Environmentally Responsible:</strong> We help reduce water waste while maintaining crop health.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Accessible to All:</strong> Whether you run a large farm or a small backyard garden, Smart Irrigation Advisor is here to help.</li>
+                    </ul>
+                </div>
+                
+                <div class="about-section">
+                    <h2 class="section-title"><i class="fas fa-handshake"></i> Join Our Growing Community</h2>
+                    <p class="section-content">
+                        We are committed to helping farmers, gardeners, and agricultural experts make smarter decisions. 
+                        Join us in shaping a future where technology and sustainability go hand in hand.
+                    </p>
+                </div>
+                
+                <div class="contact-section">
+                    <p>📩 Have questions? Want to collaborate? Reach out at <a href="mailto:contact@smartirrigation.com" class="contact-email">contact@smartirrigation.com</a>.</p>
+                    <p class="closing">Let's grow smarter, together! 🌱</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Footer Content Grid -->
+            <div class="footer-grid">
+                <!-- Brand Information -->
+                <div>
+                    <div class="footer-brand">
+                        <i class="fas fa-tint footer-brand-icon"></i>
+                        <span class="footer-brand-name">Smart Irrigation</span>
+                    </div>
+                    <p class="footer-about">Your trusted partner for smart irrigation solutions and water optimization.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="main.html" class="footer-link">Irrigation Tool</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                      <li class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>46 NAB Road, Warangal</span>
+                      </li>
+                      <li class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 12345 67890</span>
+                      </li>
+                      <li class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@smartirrigation.com</span>
+                      </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook social-icon"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter social-icon"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram social-icon"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube social-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright Notice -->
+            <div class="copyright">
+                <p>&copy; 2025 Smart Irrigation Advisor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

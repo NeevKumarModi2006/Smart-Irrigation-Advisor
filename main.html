@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation Advisor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tail1">
+    <!-- Navigation Bar -->
+    <nav class="tail2">
+        <div class="tail3">
+            <div class="tail4">
+                <!-- Brand Logo and Name -->
+                <div class="tail5">
+                    <i class="fas fa-tint tail6"></i>
+                    <span class="tail7">Smart Irrigation Advisor</span>
+                </div>
+                
+                <!-- Desktop Navigation Menu -->
+                <div class="tail8">
+                    <a href="index.html" class="tail9">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <a href="about.html" class="tail9">
+                        <i class="fas fa-info-circle"></i>
+                        About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="tail10">
+        <div class="tail11">
+            <h1 class="tail12" data-aos="fade-up">Smart Irrigation Advisor</h1>
+            <p class="tail13" data-aos="fade-up" data-aos-delay="100">Get personalized irrigation recommendations based on your crop, soil type, and location. Our smart algorithm will help you optimize water usage.</p>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="tail14">
+        <div class="tail15">
+            <!-- Farm Details Form -->
+            <div class="tail16" data-aos="fade-up">
+                <h2 class="tail17">Enter Your Farm Details</h2>
+                
+                <div class="tail18">
+                    <!-- Location Input with Autocomplete -->
+                    <div class="tail19">
+                        <label for="location" class="tail20">Location (start typing):</label>
+                        <input type="text" id="location" placeholder="Enter your location" required
+                            class="tail21">
+                        <div id="suggestions" class="tail22"></div>
+                    </div>
+                    
+                    <!-- Crop Type Selection -->
+                    <div class="tail19">
+                        <label for="cropType" class="tail20">Crop Type:</label>
+                        <select id="cropType" required class="tail21">
+                            <option value="">Select Crop Type</option>
+                            <option value="rice">Rice</option>
+                            <option value="wheat">Wheat</option>
+                            <option value="cotton">Cotton</option>
+                            <option value="maize">Maize</option>
+                            <option value="sugarcane">Sugarcane</option>
+                            <option value="millet">Millet</option>
+                            <option value="soybean">Soybean</option>
+                            <option value="groundnut">Groundnut</option>
+                            <option value="pulses">Pulses</option>
+                            <option value="barley">Barley</option>
+                            <option value="vegetables">Vegetables</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Soil Type Selection -->
+                    <div class="tail19">
+                        <label for="soilType" class="tail20">Soil Type (optional):</label>
+                        <select id="soilType" class="tail21">
+                            <option value="">Select Soil Type</option>
+                            <option value="sandy">Sandy</option>
+                            <option value="clay">Clay</option>
+                            <option value="loam">Loam</option>
+                            <option value="silt">Silt</option>
+                            <option value="peat">Peat</option>
+                            <option value="chalk">Chalk</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Soil Humidity Input -->
+                    <div class="tail19">
+                        <label for="soilHumidity" class="tail20">Soil Humidity (optional, %):</label>
+                        <input type="number" id="soilHumidity" placeholder="Enter soil humidity (0-100%)" min="0" max="100"
+                            class="tail21">
+                    </div>
+                </div>
+                
+                <!-- Get Advice Button -->
+                <div class="tail23">
+                    <button id="getAdviceBtn" class="tail24">
+                        <i class="fas fa-tint tail25"></i> Get Irrigation Advice
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Advice Output Section -->
+            <div id="output" class="tail26"></div>
+            
+            <!-- How It Works Section -->
+            <div class="tail27" data-aos="fade-up">
+                <h2 class="tail28">How It Works</h2>
+                
+                <div class="tail29">
+                    <!-- Step 1: Location -->
+                    <div class="tail30">
+                        <div class="tail31">
+                            <i class="fas fa-map-marker-alt tail32"></i>
+                        </div>
+                        <h3 class="tail33">1. Enter Your Location</h3>
+                        <p class="tail34">We use your location to understand the climate and water requirements in your area.</p>
+                    </div>
+                    
+                    <!-- Step 2: Crop & Soil -->
+                    <div class="tail30">
+                        <div class="tail31">
+                            <i class="fas fa-leaf tail32"></i>
+                        </div>
+                        <h3 class="tail33">2. Specify Crop & Soil</h3>
+                        <p class="tail34">Different crops and soil types have varying water needs and retention capabilities.</p>
+                    </div>
+                    
+                    <!-- Step 3: Recommendations -->
+                    <div class="tail30">
+                        <div class="tail31">
+                            <i class="fas fa-tint tail32"></i>
+                        </div>
+                        <h3 class="tail33">3. Get Recommendations</h3>
+                        <p class="tail34">Receive personalized irrigation advice to optimize water usage and crop growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="tail35">
+        <div class="tail36">
+            <!-- Footer Content Grid -->
+            <div class="tail37">
+                <!-- Brand Information -->
+                <div>
+                    <div class="tail38">
+                        <i class="fas fa-tint tail39"></i>
+                        <span class="tail40">Smart Irrigation</span>
+                    </div>
+                    <p class="tail41">Your trusted partner for smart irrigation solutions and water optimization.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="tail42">Quick Links</h3>
+                    <ul class="tail43">
+                        <li><a href="index.html" class="tail44">Home</a></li>
+                        <li><a href="main.html" class="tail44">Irrigation Tool</a></li>
+                        <li><a href="about.html" class="tail44">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="tail42">Contact Us</h3>
+                    <ul class="tail45">
+                      <li class="tail46">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>46 NAB Road, Warangal</span>
+                      </li>
+                      <li class="tail46">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 12345 67890</span>
+                      </li>
+                      <li class="tail46">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@smartirrigation.com</span>
+                      </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="tail42">Follow Us</h3>
+                    <div class="tail47">
+                        <a href="#" class="tail48">
+                            <i class="fab fa-facebook tail49"></i>
+                        </a>
+                        <a href="#" class="tail48">
+                            <i class="fab fa-twitter tail49"></i>
+                        </a>
+                        <a href="#" class="tail48">
+                            <i class="fab fa-instagram tail49"></i>
+                        </a>
+                        <a href="#" class="tail48">
+                            <i class="fab fa-youtube tail49"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright Notice -->
+            <div class="tail50">
+                <p>&copy; 2025 Smart Irrigation Advisor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
