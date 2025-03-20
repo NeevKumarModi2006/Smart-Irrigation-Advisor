@@ -1,4 +1,4 @@
-// Getting the animation library up and running
+// Getting the animation library 
 AOS.init();
 
 // Grabbing all the important elements from our webpage
@@ -364,13 +364,13 @@ function generateAdvice(cropType, soilType, soilHumidity, weatherData) {
                 Here's what we recommend for your ${cropType}:
             </div>
             <div class="advice-list">
-                <div class="advice-item">
-                    <i class="fas fa-tint" style="color: rgb(0, 0, 255);  transform: translateY(5px);"></i> Water: ${
+                <div class="advice-item" style="font-size: medium; font-weight:700;">
+                    <i class="fas fa-tint" style="color: rgb(0, 0, 255);  transform: translateY(5px);"></i> Water : ${
                       recommendations.water
                     }
                 </div>
-                <div class="advice-item">
-                    <i class="fas fa-flask" style="color: rgb(0, 128, 0); transform: translateY(5px);"></i> Fertilizer: ${
+                <div class="advice-item" style="font-size: medium; font-weight:700;">
+                    <i class="fas fa-flask" style="color: rgb(0, 128, 0); transform: translateY(5px);"></i> Fertilizer : ${
                       recommendations.fertilizer
                     }
                 </div>
