@@ -94,6 +94,7 @@
             margin-bottom: 2rem;
             max-width: 1000px;
             margin: 0 auto;
+            animation: slideUp 0.9s ease;
         }
         
         .about-header {
@@ -117,6 +118,7 @@
         
         .about-section {
             margin-bottom: 2.5rem;
+            animation: slideUp 0.9s ease;
         }
         
         .section-title {
@@ -307,6 +309,20 @@
             
             .about-container {
                 padding: 1.5rem;
+            }
+        }
+        
+        /* Starting Fade Effect */
+        @keyframes slideUp {
+            from {
+                transform: translateY(+60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                transform: translateX(0);
+                opacity: 1;
             }
         }
     </style>
