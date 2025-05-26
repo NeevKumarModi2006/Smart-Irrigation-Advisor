@@ -2,6 +2,8 @@
 
 A simple, web-based platform to guide and inform users about smart irrigation practices and efficient water use in agriculture.
 
+<a target="_blank" href="https://neevkumarmodi2006.github.io/Smart-Irrigation-Advisor/">Click here to Open</a>
+
 ## 🚀 Features
 
 - User-friendly web interface
