@@ -10,15 +10,16 @@ A simple, web-based platform to guide and inform users about smart irrigation pr
 - Informative sections about the project and irrigation techniques
 
 ## 📁 Project Structure
-
-├── index.html # Main landing page
-├── main.html # Dashboard or main interface
-├── about.html # About the project
-├── style.css # General styles
-├── home.css # Homepage-specific styles
-├── script.js # JavaScript for interactivity
-├── img_.jpg # Image asset
-
+<pre>
+Smart-Irrigation-Advisor/
+├── index.html       # Main landing page
+├── main.html        # Dashboard or main interface
+├── about.html       # About the project
+├── style.css        # General styles
+├── home.css         # Homepage-specific styles
+├── script.js        # JavaScript for interactivity
+├── img_.jpg         # Image asset
+</pre>
 
 ## 🧑‍💻 Getting Started
 
